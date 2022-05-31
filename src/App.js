@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import { evaluate } from 'mathjs';
 import logo from './img/AlphaTeamDev-sm.png';
 import ButtonCalc from './components/buttons/button.jsx';
 import ButtonClear from './components/button-clear/button-clear.jsx';
@@ -14,8 +15,14 @@ function App() {
   const [input, setInput] = useState('');
 
   const addInput = value => {
-    setInput(input + value);
-  }
+    setInput(input + value.trim());
+  };
+
+  const calculate = () => {
+    if( input ) {
+      setInput(evaluate(input));
+    }
+  };
 
   return (
     <div className="App">
@@ -43,7 +50,7 @@ function App() {
           <ButtonCalc click_btn={ addInput }> * </ButtonCalc>
         </div>
         <div className="row">
-          <ButtonCalc click_btn={ addInput }> = </ButtonCalc>
+          <ButtonCalc click_btn={ calculate }> = </ButtonCalc>
           <ButtonCalc click_btn={ addInput }> 0 </ButtonCalc>
           <ButtonCalc click_btn={ addInput }> . </ButtonCalc>
           <ButtonCalc click_btn={ addInput }> / </ButtonCalc>
