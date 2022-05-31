@@ -49,7 +49,7 @@ function App() {
           <ButtonCalc click_btn={ addInput }> / </ButtonCalc>
         </div>
         <div className="row">
-          <ButtonClear> Clear </ButtonClear>
+          <ButtonClear clearInput={ () => setInput('') }> Clear </ButtonClear>
         </div>
       </div>
     </div>
