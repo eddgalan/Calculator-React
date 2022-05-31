@@ -1,6 +1,7 @@
 import './App.css';
 import logo from './img/AlphaTeamDev-sm.png';
 import ButtonCalc from './components/buttons/button.jsx';
+import Screen from './components/screen/screen.jsx';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <img className="logo" src={ logo } alt="Logo AlphaTeamDev" />
       </div>
       <div className="calculator-container">
+        <Screen />
         <div className="row">
           <ButtonCalc> 1 </ButtonCalc>
           <ButtonCalc> 2 </ButtonCalc>
@@ -31,7 +33,7 @@ function App() {
           <ButtonCalc> = </ButtonCalc>
           <ButtonCalc> 0 </ButtonCalc>
           <ButtonCalc> . </ButtonCalc>
-          <ButtonCalc> / </ButtonCalc> 
+          <ButtonCalc> / </ButtonCalc>
         </div>
         <div className="row"></div>
       </div>
