@@ -3,7 +3,7 @@ import './button.css';
 
 function ButtonCalc(props) {
   const isOperator = value => {
-    return isNaN(value) && (value != '.') & (value != '=');
+    return isNaN(value) && (value != ' . ') & (value != ' = ');
   };
 
   return (

@@ -1,6 +1,7 @@
 import './App.css';
 import logo from './img/AlphaTeamDev-sm.png';
 import ButtonCalc from './components/buttons/button.jsx';
+import ButtonClear from './components/button-clear/button-clear.jsx';
 import Screen from './components/screen/screen.jsx';
 
 function App() {
@@ -35,7 +36,9 @@ function App() {
           <ButtonCalc> . </ButtonCalc>
           <ButtonCalc> / </ButtonCalc>
         </div>
-        <div className="row"></div>
+        <div className="row">
+          <ButtonClear> Clear </ButtonClear>
+        </div>
       </div>
     </div>
   );
